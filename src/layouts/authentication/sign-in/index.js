@@ -49,16 +49,16 @@ function SignIn() {
     <CoverLayout
       title="Nice to see you!"
       color="white"
-      description="Enter your email and password to sign in"
-      premotto="INSPIRED BY THE FUTURE:"
-      motto="THE VISION UI DASHBOARD"
+      description="Enter your account and password to sign in"
+      premotto="AI工具:"
+      motto="晨馨未来 X AIOT"
       image={bgSignIn}
     >
       <VuiBox component="form" role="form">
         <VuiBox mb={2}>
           <VuiBox mb={1} ml={0.5}>
             <VuiTypography component="label" variant="button" color="white" fontWeight="medium">
-              Email
+              Account
             </VuiTypography>
           </VuiBox>
           <GradientBorder
@@ -71,7 +71,7 @@ function SignIn() {
               palette.gradients.borderLight.angle
             )}
           >
-            <VuiInput type="email" placeholder="Your email..." fontWeight="500" />
+            <VuiInput type="text" placeholder="Your account..." fontWeight="500" />
           </GradientBorder>
         </VuiBox>
         <VuiBox mb={2}>

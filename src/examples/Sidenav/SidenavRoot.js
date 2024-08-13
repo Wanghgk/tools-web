@@ -86,6 +86,8 @@ export default styled(Drawer)(({ theme, ownerState }) => {
           ),
     backdropFilter: transparentSidenav ? "unset" : "blur(120px)",
       ...(miniSidenav ? drawerCloseStyles() : drawerOpenStyles()),
+      /* 隐藏默认的滚动条样式 */
+      scrollbarWidth: "none", //能隐藏滚动条
     },
   };
 });

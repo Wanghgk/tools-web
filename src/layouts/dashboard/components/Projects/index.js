@@ -71,15 +71,15 @@ function Projects() {
     >
       <VuiBox display="flex" justifyContent="space-between" alignItems="center" mb="32px">
         <VuiBox mb="auto">
-          <VuiTypography color="white" variant="lg" mb="6px" gutterBottom>
-            Projects
+          <VuiTypography color="white" variant="lg" mb="6px" fontWeight="bold" gutterBottom>
+            快速入口
           </VuiTypography>
-          <VuiBox display="flex" alignItems="center" lineHeight={0}>
-            <BsCheckCircleFill color="green" size="15px" />
-            <VuiTypography variant="button" fontWeight="regular" color="text" ml="5px">
-              &nbsp;<strong>30 done</strong> this month
-            </VuiTypography>
-          </VuiBox>
+          {/*<VuiBox display="flex" alignItems="center" lineHeight={0}>*/}
+          {/*  <BsCheckCircleFill color="green" size="15px" />*/}
+          {/*  <VuiTypography variant="button" fontWeight="regular" color="text" ml="5px">*/}
+          {/*    &nbsp;<strong>30 done</strong> this month*/}
+          {/*  </VuiTypography>*/}
+          {/*</VuiBox>*/}
         </VuiBox>
         <VuiBox color="text" px={2}>
           <Icon sx={{ cursor: "pointer", fontWeight: "bold" }} fontSize="small" onClick={openMenu}>

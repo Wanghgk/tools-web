@@ -84,11 +84,11 @@ function Sidenav({ color, brandName, routes, ...rest }) {
   }, []);
 
   // Render all the routes from the routes.js (All the visible items on the Sidenav)
-  const renderRoutes = routes.map(({ type, name, icon, title, noCollapse, key, route, href }) => {
+  const renderRoutes = routes.map(({ type, name, icon, title, noCollapse, key, route, href, sideNav }) => {
     let returnValue;
 
     if (type === "collapse") {
-      returnValue = href ? (
+      returnValue = sideNav ? ( href ? (
         <Link
           href={href}
           key={key}
@@ -115,7 +115,7 @@ function Sidenav({ color, brandName, routes, ...rest }) {
             noCollapse={noCollapse}
           />
         </NavLink>
-      );
+      )) : null;
     } else if (type === "title") {
       returnValue = (
         <VuiTypography
@@ -164,7 +164,7 @@ function Sidenav({ color, brandName, routes, ...rest }) {
             <Icon sx={{ fontWeight: "bold" }}>close</Icon>
           </VuiTypography>
         </VuiBox>
-        <VuiBox component={NavLink} to="/" display="flex" alignItems="center">
+        <VuiBox display="flex" alignItems="center">
           <VuiBox
             sx={
               ((theme) => sidenavLogoLabel(theme, { miniSidenav }),
@@ -184,7 +184,8 @@ function Sidenav({ color, brandName, routes, ...rest }) {
                 })
               }
             >
-              <SimmmpleLogo size="24px" />
+              {/*<SimmmpleLogo size="24px" />*/}
+                <img src="/logo-1.png" style={{ width: "25px" }} />
             </VuiBox>
             <VuiTypography
               variant="button"
@@ -225,20 +226,20 @@ function Sidenav({ color, brandName, routes, ...rest }) {
           },
         })}
       >
-        <SidenavCard color={color} />
-        <VuiBox mt={2}>
-          <VuiButton
-            component="a"
-            href="https://creative-tim.com/product/vision-ui-dashboard-pro-react"
-            target="_blank"
-            rel="noreferrer"
-            variant="gradient"
-            color={color}
-            fullWidth
-          >
-            Upgrade to PRO
-          </VuiButton>
-        </VuiBox>
+        {/*<SidenavCard color={color} />*/}
+        {/*<VuiBox mt={2}>*/}
+        {/*  <VuiButton*/}
+        {/*    component="a"*/}
+        {/*    href="https://creative-tim.com/product/vision-ui-dashboard-pro-react"*/}
+        {/*    target="_blank"*/}
+        {/*    rel="noreferrer"*/}
+        {/*    variant="gradient"*/}
+        {/*    color={color}*/}
+        {/*    fullWidth*/}
+        {/*  >*/}
+        {/*    Upgrade to PRO*/}
+        {/*  </VuiButton>*/}
+        {/*</VuiBox>*/}
       </VuiBox>
     </SidenavRoot>
   );

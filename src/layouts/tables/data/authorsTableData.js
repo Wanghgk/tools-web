@@ -64,11 +64,11 @@ function Function({ job, org }) {
 
 export default {
   columns: [
-    { name: "author", align: "left" },
-    { name: "function", align: "left" },
-    { name: "status", align: "center" },
-    { name: "employed", align: "center" },
-    { name: "action", align: "center" },
+    { name: "author", align: "left", key: "author"},
+    { name: "function", align: "left", key: "function"},
+    { name: "status", align: "center", key: "status"},
+    { name: "employed", align: "center", key: "employed"},
+    { name: "action", align: "center", key: "action"},
   ],
 
   rows: [

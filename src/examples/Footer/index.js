@@ -37,7 +37,7 @@ function Footer() {
           sx={{ textAlign: "center", fontWeight: "400 !important" }}
           color="white"
         >
-          @ 2021, Made with ❤️&nbsp;&nbsp;&nbsp; by{" "}
+          @ 2024, Made with ❤️&nbsp;&nbsp;&nbsp; by{" "}
           <VuiTypography
             component="a"
             variant="button"
@@ -46,9 +46,9 @@ function Footer() {
             color="white"
             mr="2px"
           >
-            Simmmple
+            Vision UI
           </VuiTypography>
-          &
+          & 作者: {" "}
           <VuiTypography
             ml="2px"
             mr="2px"
@@ -58,9 +58,9 @@ function Footer() {
             sx={{ textAlign: "center", fontWeight: "500 !important" }}
             color="white"
           >
-            Creative Tim
+            晨馨未来
           </VuiTypography>
-          for a better web
+
         </VuiTypography>
       </VuiBox>
       <VuiBox item xs={10}>

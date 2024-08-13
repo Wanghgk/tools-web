@@ -41,11 +41,12 @@
 // Vision UI Dashboard React layouts
 import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
-import Billing from "layouts/billing";
+import Tools from "layouts/billing";
 import RTL from "layouts/rtl";
 import Profile from "layouts/profile";
 import SignIn from "layouts/authentication/sign-in";
 import SignUp from "layouts/authentication/sign-up";
+import Chat from "layouts/chat";
 
 // Vision UI Dashboard React icons
 import { IoRocketSharp } from "react-icons/io5";
@@ -59,39 +60,33 @@ import { IoHome } from "react-icons/io5";
 const routes = [
   {
     type: "collapse",
-    name: "Dashboard",
-    key: "dashboard",
-    route: "/dashboard",
+    name: "主页",
+    key: "home",
+    route: "/home",
     icon: <IoHome size="15px" color="inherit" />,
     component: Dashboard,
     noCollapse: true,
+    sideNav: true,
   },
   {
     type: "collapse",
-    name: "Tables",
+    name: "排行榜",
     key: "tables",
     route: "/tables",
     icon: <IoStatsChart size="15px" color="inherit" />,
     component: Tables,
     noCollapse: true,
+    sideNav: true,
   },
   {
     type: "collapse",
-    name: "Billing",
-    key: "billing",
-    route: "/billing",
+    name: "工具",
+    key: "tools",
+    route: "/tools",
     icon: <BsCreditCardFill size="15px" color="inherit" />,
-    component: Billing,
+    component: Tools,
     noCollapse: true,
-  },
-  {
-    type: "collapse",
-    name: "RTL",
-    key: "rtl",
-    route: "/rtl",
-    icon: <IoBuild size="15px" color="inherit" />,
-    component: RTL,
-    noCollapse: true,
+    sideNav: true,
   },
   { type: "title", title: "Account Pages", key: "account-pages" },
   {
@@ -102,6 +97,7 @@ const routes = [
     icon: <BsFillPersonFill size="15px" color="inherit" />,
     component: Profile,
     noCollapse: true,
+    sideNav: true,
   },
   {
     type: "collapse",
@@ -111,6 +107,7 @@ const routes = [
     icon: <IoIosDocument size="15px" color="inherit" />,
     component: SignIn,
     noCollapse: true,
+    sideNav: false,
   },
   {
     type: "collapse",
@@ -120,7 +117,18 @@ const routes = [
     icon: <IoRocketSharp size="15px" color="inherit" />,
     component: SignUp,
     noCollapse: true,
+    sideNav: false,
   },
+  {
+    type: "collapse",
+    name: "Chat",
+    key: "chat",
+    route: "/chat",
+    icon: <IoRocketSharp size="15px" color="inherit" />,
+    component: Chat,
+    noCollapse: true,
+    sideNav: false,
+  }
 ];
 
 export default routes;

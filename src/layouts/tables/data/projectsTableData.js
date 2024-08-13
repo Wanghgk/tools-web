@@ -60,11 +60,11 @@ const action = (
 
 export default {
   columns: [
-    { name: "project", align: "left" },
-    { name: "budget", align: "left" },
-    { name: "status", align: "left" },
-    { name: "completion", align: "center" },
-    { name: "action", align: "center" },
+    { name: "project", align: "left", key: "project"},
+    { name: "budget", align: "left", key: "budget"},
+    { name: "status", align: "left", key: "status"},
+    { name: "completion", align: "center", key: "completion"},
+    { name: "action", align: "center", key: "action"},
   ],
 
   rows: [

@@ -61,8 +61,8 @@ function CoverLayout({
       <DefaultNavbar
         action={{
           type: "external",
-          route: "https://creative-tim.com/product/vision-ui-dashboard-pro-react",
-          label: "BUY NOW",
+          route: "https://www.cxwl.org/",
+          label: "晨馨未来",
         }}
       />
       <VuiBox

@@ -116,11 +116,11 @@ function DefaultNavbar({ transparent, light, action }) {
               margin: "0 auto",
             }}
           >
-            VISION UI FREE
+            C_X TOOLS
           </VuiTypography>
         </VuiBox>
         <VuiBox color="inherit" display={{ xs: "none", lg: "flex" }} m={0} p={0}>
-          <DefaultNavbarLink icon="donut_large" name="dashboard" route="/dashboard" />
+          <DefaultNavbarLink icon="donut_large" name="首页" route="/home" />
           <DefaultNavbarLink icon="person" name="profile" route="/profile" />
           <DefaultNavbarLink icon="account_circle" name="sign up" route="/authentication/sign-up" />
           <DefaultNavbarLink icon="key" name="sign in" route="/authentication/sign-in" />
@@ -134,6 +134,7 @@ function DefaultNavbar({ transparent, light, action }) {
                 variant="gradient"
                 color={action.color ? action.color : "info"}
                 size="small"
+                sx={{fontSize: "15px"}}
               >
                 {action.label}
               </VuiButton>
@@ -147,7 +148,7 @@ function DefaultNavbar({ transparent, light, action }) {
                 rel="noreferrer"
                 color={action.color ? action.color : "info"}
                 sx={({ typography: { size }, functions: { pxToRem } }) => ({
-                  fontSize: pxToRem(size.sm),
+                  fontSize: "15px",
                 })}
               >
                 {action.label}

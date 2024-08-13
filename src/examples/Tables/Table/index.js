@@ -84,10 +84,10 @@ function Table({ columns, rows }) {
   const renderRows = rows.map((row, key) => {
     const rowKey = `row-${key}`;
 
-    const tableRow = columns.map(({ name, align }) => {
+    const tableRow = columns.map(({ name, align, key}) => {
       let template;
 
-      if (Array.isArray(row[name])) {
+      if (Array.isArray(row[key])) {
         template = (
           <VuiBox
             key={uuidv4()}
@@ -97,7 +97,7 @@ function Table({ columns, rows }) {
           >
             <VuiBox display="flex" alignItems="center" py={0.5} px={1}>
               <VuiBox mr={2}>
-                <VuiAvatar src={row[name][0]} name={row[name][1]} variant="rounded" size="sm" />
+                <VuiAvatar src={row[key][0]} name={row[key][1]} variant="rounded" size="sm" />
               </VuiBox>
               <VuiTypography
                 color="white"
@@ -105,7 +105,7 @@ function Table({ columns, rows }) {
                 fontWeight="medium"
                 sx={{ width: "max-content" }}
               >
-                {row[name][1]}
+                {row[key][1]}
               </VuiTypography>
             </VuiBox>
           </VuiBox>
@@ -125,7 +125,7 @@ function Table({ columns, rows }) {
               color="text"
               sx={{ display: "inline-block", width: "max-content" }}
             >
-              {row[name]}
+              {row[key]}
             </VuiTypography>
           </VuiBox>
         );

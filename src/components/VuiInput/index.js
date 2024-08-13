@@ -47,6 +47,7 @@ const VuiInput = forwardRef(({ size, icon, error, success, disabled, ...rest }, 
         <VuiInputRoot
           {...rest}
           ownerState={{ size, error, success, iconDirection, direction, disabled }}
+          sx={{scrollbarWidth: "none"}}
         />
       </VuiInputWithIconRoot>
     );
